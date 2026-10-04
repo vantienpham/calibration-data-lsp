@@ -1,0 +1,46 @@
+[project]
+name = "fsc"
+version = "1.0.0"
+description = "Calibration data for learned low-rank compression of large language models: code and records of the paper"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{ name = "Van Tien Pham" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    # The experiments ran with 2.6.0+cu124, which uv.lock pins; the cap also keeps
+    # CUDA 12.x builds, which older drivers can run.
+    "torch>=2.6,<2.7",
+    # 4.5x supports Qwen3 and Llama-3.2 and keeps the 4.x module layout the code
+    # hooks into; 5.x reorganized the attention and cache classes.
+    "transformers>=4.55,<4.58",
+    "huggingface-hub>=0.34,<1.0",
+    "datasets>=4.0,<5",
+    "accelerate>=1.6",
+    "lm-eval==0.4.9.2",
+    "numpy>=1.26,<2.3",
+    "pandas>=2.2",
+    "pyarrow>=16",
+    "matplotlib>=3.8",
+    "sentencepiece>=0.2",
+    "protobuf>=4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.urls]
+Repository = "https://github.com/vantienpham/calibration-data-lsp"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fsc"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: long-running tests",
+    "gpu: tests that need a CUDA device",
+]

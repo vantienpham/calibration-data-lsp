@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Outputs of your own runs (the paper's are in records/ and results/)
+out/
+logs/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store

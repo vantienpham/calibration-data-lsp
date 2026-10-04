@@ -1,0 +1,152 @@
+== opt-1.3b r30
+  final_ppl_wikitext2    best wikitext2     17.36 | worst alpaca        44.67
+  final_ppl_c4           best c4            21.46 | worst alpaca        32.26
+  final_sp_geo           best slimpajama    12.44 | worst wikitext2     25.52
+  acc best slimpajama 43.4 | lowest real wikitext2 42.3 | spread all 1.7, excl. selfgen 1.7
+  geo rank: selfdoc 1.608, c4 1.636, slimpajama 1.691, selfgen 1.738, alpaca 2.177, wikitext2 2.789
+  max rank: c4 2.84, slimpajama 2.90, selfdoc 2.96, selfgen 3.33, alpaca 5.27, wikitext2 9.57
+  diagonal is the column minimum on every held-out set: False; self column best: selfdoc
+  max rel KL wikitext2 9.57, alpaca 5.27
+== llama-3.2-1b r30
+  final_ppl_wikitext2    best wikitext2     16.85 | worst alpaca        66.49
+  final_ppl_c4           best c4            30.90 | worst wikitext2     58.54
+  final_sp_geo           best selfdoc       20.77 | worst wikitext2    132.15
+  acc best alpaca 43.3 | lowest real wikitext2 41.4 | spread all 1.9, excl. selfgen 1.9
+  geo rank: selfdoc 1.366, selfgen 1.535, slimpajama 1.611, alpaca 1.818, c4 1.917, wikitext2 2.312
+  max rank: selfdoc 1.91, slimpajama 2.27, selfgen 2.46, alpaca 3.50, c4 3.53, wikitext2 5.21
+  diagonal is the column minimum on every held-out set: True; self column best: selfgen
+  max rel KL wikitext2 5.21, alpaca 3.50
+== qwen3-1.7b r30
+  final_ppl_wikitext2    best wikitext2     12.91 | worst selfgen       68.09
+  final_ppl_c4           best c4            23.93 | worst selfgen       89.24
+  final_sp_geo           best slimpajama    14.67 | worst wikitext2     86.02
+  acc best alpaca 49.8 | lowest real wikitext2 44.6 | spread all 12.9, excl. selfgen 5.4
+  geo rank: selfdoc 1.554, slimpajama 1.841, alpaca 2.475, c4 2.575, wikitext2 3.223, selfgen 3.752
+  max rank: selfdoc 2.26, slimpajama 3.52, alpaca 4.98, wikitext2 7.35, selfgen 7.38, c4 8.92
+  diagonal is the column minimum on every held-out set: False; self column best: selfdoc
+  max rel KL wikitext2 7.35, alpaca 4.98
+== opt-1.3b r50
+  final_ppl_wikitext2    best wikitext2     20.82 | worst alpaca       119.93
+  final_ppl_c4           best c4            27.74 | worst alpaca        58.90
+  final_sp_geo           best slimpajama    15.65 | worst wikitext2     55.31
+  acc best slimpajama 41.4 | lowest real wikitext2 38.7 | spread all 3.1, excl. selfgen 3.1
+  geo rank: c4 1.599, selfdoc 1.621, slimpajama 1.642, selfgen 1.674, alpaca 2.155, wikitext2 2.470
+  max rank: c4 2.69, slimpajama 2.70, selfdoc 3.10, selfgen 3.14, alpaca 5.43, wikitext2 7.31
+  diagonal is the column minimum on every held-out set: False; self column best: selfdoc
+  max rel KL wikitext2 7.31, alpaca 5.43
+== llama-3.2-1b r50
+  final_ppl_wikitext2    best wikitext2     22.80 | worst alpaca       137.41
+  final_ppl_c4           best c4            45.32 | worst wikitext2    102.41
+  final_sp_geo           best selfdoc       32.22 | worst wikitext2    262.33
+  acc best alpaca 39.8 | lowest real wikitext2 36.3 | spread all 3.5, excl. selfgen 3.5
+  geo rank: selfdoc 1.343, selfgen 1.494, slimpajama 1.582, alpaca 1.737, c4 1.772, wikitext2 2.139
+  max rank: selfdoc 1.90, slimpajama 2.21, selfgen 2.49, alpaca 3.21, c4 3.32, wikitext2 4.87
+  diagonal is the column minimum on every held-out set: False; self column best: selfgen
+  max rel KL wikitext2 4.87, alpaca 3.21
+== qwen3-1.7b r50
+  final_ppl_wikitext2    best wikitext2     16.30 | worst alpaca       103.88
+  final_ppl_c4           best c4            32.63 | worst selfgen      122.89
+  final_sp_geo           best slimpajama    23.27 | worst wikitext2    169.56
+  acc best alpaca 44.9 | lowest real wikitext2 39.9 | spread all 5.0, excl. selfgen 5.0
+  geo rank: selfdoc 1.530, slimpajama 1.756, c4 1.990, alpaca 2.219, selfgen 2.468, wikitext2 2.697
+  max rank: selfdoc 2.30, slimpajama 2.88, c4 3.63, alpaca 4.15, selfgen 4.56, wikitext2 5.45
+  diagonal is the column minimum on every held-out set: False; self column best: selfdoc
+  max rel KL wikitext2 5.45, alpaca 4.15
+== protocol: max merge-check KL 2.38e-03 over 87 runs
+  uniform allocation: 171 runs, worst |realized - target| = 0.052 points (records/runs/opt-125m/repro-wikitext2-r70/alloc.json)
+== learning-rate grid (best validation KL per rate)
+  opt-1.3b      3e-05: 0.5522 (8 ep, first 0.748) 1e-04: 0.5105 (8 ep, first 0.857) 3e-04: 0.5343 (8 ep, first 1.330) 1e-03: 0.7182 (8 ep, first 4.785) | best 1e-04, 1e-3 excess 40.7%
+  llama-3.2-1b  3e-05: 1.1648 (8 ep, first 1.584) 1e-04: 1.0802 (8 ep, first 1.597) 3e-04: 1.0925 (8 ep, first 2.588) 1e-03: 1.4627 (8 ep, first 6.175) | best 1e-04, 1e-3 excess 35.4%
+  qwen3-1.7b    3e-05: 0.7667 (8 ep, first 1.030) 1e-04: 0.7263 (8 ep, first 1.069) 3e-04: 0.7647 (8 ep, first 1.617) 1e-03: 1.0175 (8 ep, first 6.338) | best 1e-04, 1e-3 excess 40.1%
+  opt-125m, reproduction setting (WikiText-2, 10 epochs)
+    -30%: 1e-04: 0.4474 3e-04: 0.3555 1e-03: 0.2923 3e-03: 0.3642 | best 1e-03
+    -50%: 1e-04: 0.7838 3e-04: 0.6159 1e-03: 0.5346 3e-03: 0.6330 | best 1e-03
+    -70%: 1e-04: 1.3490 3e-04: 1.0576 1e-03: 0.9421 3e-03: 1.1043 | best 1e-03
+== oblique vs recast (C4, SP geo)
+  opt-1.3b      r30 ppl_c4  oblique best c4         spread   1.6
+  opt-1.3b      r30 sp_geo  oblique best slimpajama spread   2.3
+  llama-3.2-1b  r30 ppl_c4  oblique best selfgen    spread   9.0
+  llama-3.2-1b  r30 sp_geo  oblique best selfgen    spread  47.1
+  qwen3-1.7b    r30 ppl_c4  oblique best c4         spread   2.7
+  qwen3-1.7b    r30 sp_geo  oblique best selfdoc    spread  20.4
+  opt-1.3b      r50 ppl_c4  oblique best c4         spread   4.1
+  opt-1.3b      r50 sp_geo  oblique best slimpajama spread   9.5
+  llama-3.2-1b  r50 ppl_c4  oblique best selfgen    spread  12.6
+  llama-3.2-1b  r50 sp_geo  oblique best selfgen    spread  42.0
+  qwen3-1.7b    r50 ppl_c4  oblique best c4         spread   6.7
+  qwen3-1.7b    r50 sp_geo  oblique best selfdoc    spread  45.3
+  oblique better in 70 of 72; exceptions [('llama-3.2-1b', 30, 'selfgen', 'ppl_c4'), ('llama-3.2-1b', 30, 'selfgen', 'sp_geo')]; max gain 68.5
+  acc gain of training over oblique opt-1.3b r30: -1.3 to +0.9
+  acc gain of training over oblique llama-3.2-1b r30: +4.1 to +9.7
+  acc gain of training over oblique qwen3-1.7b r30: -1.6 to +9.3
+  acc gain of training over oblique opt-1.3b r50: +1.5 to +4.6
+  acc gain of training over oblique llama-3.2-1b r50: +3.8 to +7.3
+  acc gain of training over oblique qwen3-1.7b r50: +4.2 to +11.2
+  opt-1.3b      r30 best without BoolQ: ['alpaca'] 42.3
+  llama-3.2-1b  r30 best without BoolQ: ['alpaca'] 41.9
+  qwen3-1.7b    r30 best without BoolQ: ['alpaca'] 47.3
+  opt-1.3b      r50 best without BoolQ: ['alpaca'] 39.4
+  llama-3.2-1b  r50 best without BoolQ: ['alpaca'] 37.9
+  qwen3-1.7b    r50 best without BoolQ: ['alpaca'] 42.1
+  BoolQ accuracy of compressed models: 41.9 to 66.4
+== size
+  c4       n   64   113.9    61.8   208.1    36.3
+  c4       n  128    94.1    54.5   170.0    36.7
+  c4       n  256    78.6    49.6   132.9    38.2
+  c4       n  512    62.7    45.3   108.7    39.3
+  c4       n 1024    53.7    42.4    92.0    39.2
+  selfdoc  n   64    64.3    61.6    47.2    36.6
+  selfdoc  n  128    58.4    55.9    40.9    38.0
+  selfdoc  n  256    49.6    51.3    36.0    38.7
+  selfdoc  n  512    45.2    48.2    32.2    39.2
+  selfdoc  n 1024    43.6    46.9    30.3    38.3
+  c4       n 4096    48.9    40.4    74.7    38.4
+  selfdoc  n 4096    42.9    46.5    29.8    38.6
+== measured-KL allocation (improved cells: lower ppl, higher acc)
+  wikitext2  uniform   22.8  102.4  262.3   36.3 | kl   22.5   91.7  224.3   37.6
+  c4         uniform   62.7   45.3  108.7   39.3 | kl   63.2   43.6  100.1   40.8
+  slimpajama uniform   59.6   51.5   33.7   38.1 | kl   63.5   51.2   33.4   38.0
+  alpaca     uniform  137.4   76.7   99.3   39.8 | kl  114.0   69.9   84.4   41.6
+  selfgen    uniform   53.2   59.3   39.0   38.4 | kl   49.2   55.2   35.6   39.2
+  selfdoc    uniform   45.2   48.2   32.2   39.2 | kl   44.4   46.4   30.4   39.9
+  improved 21 of 24, max ppl reduction 17%
+== free factors (better lr on validation KL) vs projectors
+  llama-3.2-1b  wikitext2  rel ppl  +0.9% +10.0% +14.7% | acc +0.1
+  llama-3.2-1b  c4         rel ppl +10.1%  +4.1% +19.8% | acc +0.2
+  llama-3.2-1b  selfgen    rel ppl  -1.3%  +0.4%  -0.5% | acc +0.1
+  opt-1.3b      wikitext2  rel ppl  +2.0% +10.1% +19.8% | acc -0.6
+  opt-1.3b      c4         rel ppl  +8.1%  +5.0% +11.2% | acc +0.7
+  opt-1.3b      selfgen    rel ppl  +3.9%  +3.9%  +2.0% | acc -0.3
+== seeds
+  wikitext2  mean   22.9  102.2  261.2   36.2 | rel sd  0.6%  1.5%  1.7% | acc sd 0.47
+  c4         mean   61.0   45.3  102.9   38.5 | rel sd  2.4%  0.5%  5.9% | acc sd 0.66
+  slimpajama mean   57.9   50.8   36.1   37.5 | rel sd  3.2%  1.2%  6.0% | acc sd 0.58
+  alpaca     mean  138.3   77.1  100.6   39.9 | rel sd  0.5%  0.5%  1.3% | acc sd 0.67
+  selfgen    mean   54.3   59.3   39.8   38.2 | rel sd  4.4%  4.3%  5.0% | acc sd 0.26
+  selfdoc    mean   45.7   48.6   31.9   39.0 | rel sd  1.6%  0.7%  1.6% | acc sd 0.42
+== single-domain (ratio to dense)
+  proj-slimpajama-r50-s0   cc   3.39 c4   3.11 github   3.56 book   3.40 arxiv   3.21 wiki  13.54 stack   4.26
+  proj-sp-github-r50-s0    cc  10.96 c4   9.39 github   1.60 book  11.90 arxiv   4.46 wiki  49.41 stack   3.51
+  proj-sp-arxiv-r50-s0     cc   8.49 c4   8.20 github   6.52 book  11.90 arxiv   1.65 wiki 184.71 stack   6.73
+  proj-sp-book-r50-s0      cc   4.51 c4   4.57 github  38.19 book   2.37 arxiv  39.59 wiki 121.17 stack  16.10
+== subspaces
+  opt-1.3b      r30 init-final 0.9962 across init 0.871 final 0.866 chance 0.504 pairs closer after training 0/15
+  opt-1.3b      r50 init-final 0.9960 across init 0.902 final 0.897 chance 0.646 pairs closer after training 0/15
+  llama-3.2-1b  r30 init-final 0.9963 across init 0.854 final 0.850 chance 0.510 pairs closer after training 0/15
+  llama-3.2-1b  r50 init-final 0.9966 across init 0.891 final 0.887 chance 0.650 pairs closer after training 0/15
+  qwen3-1.7b    r30 init-final 0.9962 across init 0.849 final 0.845 chance 0.512 pairs closer after training 0/15
+  qwen3-1.7b    r50 init-final 0.9966 across init 0.887 final 0.883 chance 0.651 pairs closer after training 0/15
+== scale
+  pilot 1e-4    8 ep, best 0.5868
+  pilot 1e-5    8 ep, best 0.5917
+  pilot 3e-5    8 ep, best 0.5747
+  pilot 3e-6    8 ep, best 0.6138
+  init_ppl_wikitext2     best wikitext2    129.98 | worst alpaca        584.53 | spread 4.5
+  init_ppl_c4            best selfdoc      154.08 | worst wikitext2     733.24 | spread 4.8
+  final_ppl_wikitext2    best wikitext2     10.02 | worst alpaca         31.02 | spread 3.1
+  final_ppl_c4           best c4            18.21 | worst wikitext2      40.95 | spread 2.2
+  final_sp_geo           best selfdoc       11.36 | worst wikitext2     103.05 | spread 9.1
+  acc best alpaca 54.8 | lowest wikitext2 51.9
+  geo rank: selfdoc 1.296, slimpajama 1.717, alpaca 1.865, c4 2.236, wikitext2 2.996
+  max rank: selfdoc 1.90, slimpajama 2.37, alpaca 3.57, c4 5.60, wikitext2 9.43
+  column best: wikitext2: wikitext2, c4: c4, slimpajama: slimpajama, alpaca: alpaca, selfgen: selfdoc

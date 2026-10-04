@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or these records, please cite the paper."
+type: software
+title: "calibration-data-lsp: code and experiment records for 'When Calibration Data Become Training Data'"
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/vantienpham/calibration-data-lsp"
+authors:
+  - family-names: Pham
+    given-names: Van Tien
+    orcid: "https://orcid.org/0000-0003-3890-7188"
+keywords:
+  - large language models
+  - model compression
+  - low-rank factorization
+  - knowledge distillation
+  - calibration data
+preferred-citation:
+  type: article
+  title: "When Calibration Data Become Training Data: Specialization and Self-Generated Text in Learned Low-Rank Compression of Large Language Models"
+  authors:
+    - family-names: Pham
+      given-names: Van Tien
+      orcid: "https://orcid.org/0000-0003-3890-7188"
+  year: 2026

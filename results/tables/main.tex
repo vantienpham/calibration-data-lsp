@@ -1,0 +1,21 @@
+\textbf{Calibration} & \multicolumn{4}{c}{\textbf{OPT-1.3B}} & \multicolumn{4}{c}{\textbf{Llama-3.2-1B}} & \multicolumn{4}{c}{\textbf{Qwen3-1.7B}} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9} \cmidrule(lr){10-13}
+ & \textit{Wiki} & \textit{C4} & \textit{SP} & \textit{Acc} & \textit{Wiki} & \textit{C4} & \textit{SP} & \textit{Acc} & \textit{Wiki} & \textit{C4} & \textit{SP} & \textit{Acc} \\
+\midrule
+Dense & 14.7 & 16.3 & 9.5 & 47.6 & 9.8 & 14.1 & 8.0 & 53.3 & 9.4 & 15.4 & 7.7 & 59.0 \\
+\midrule
+\multicolumn{13}{l}{\textit{$-30\%$}} \\
+WikiText-2 & \textbf{17.4} & 31.1 & 25.5 & 42.3 & \textbf{16.9} & 58.5 & 132 & 41.4 & \textbf{12.9} & 44.2 & 86.0 & 44.6 \\
+C4 & 23.1 & \textbf{21.5} & 17.2 & 43.4 & 37.8 & \textbf{30.9} & 63.5 & 43.1 & 21.3 & \textbf{23.9} & 37.4 & 47.7 \\
+SlimPajama & 23.7 & 23.8 & \textbf{12.4} & \textbf{43.4} & 33.2 & 34.1 & 21.3 & 42.0 & 19.8 & 25.7 & \textbf{14.7} & 46.7 \\
+Alpaca & 44.7 & 32.3 & 25.5 & 43.1 & 66.5 & 45.4 & 51.3 & \textbf{43.3} & 54.1 & 36.9 & 42.8 & \textbf{49.8} \\
+Self (seq.) & 28.8 & 22.7 & 16.5 & 42.5 & 31.9 & 38.4 & 25.2 & 41.4 & 68.1 & 89.2 & 64.5 & 37.0 \\
+Self (doc.) & 26.7 & 22.6 & 16.4 & 41.7 & 27.7 & 32.3 & \textbf{20.8} & 42.0 & 21.1 & 28.7 & 16.3 & 44.4 \\
+\midrule
+\multicolumn{13}{l}{\textit{$-50\%$}} \\
+WikiText-2 & \textbf{20.8} & 50.3 & 55.3 & 38.7 & \textbf{22.8} & 102 & 262 & 36.3 & \textbf{16.3} & 74.7 & 170 & 39.9 \\
+C4 & 39.3 & \textbf{27.7} & 27.5 & 40.1 & 62.7 & \textbf{45.3} & 109 & 39.3 & 33.7 & \textbf{32.6} & 63.3 & 43.1 \\
+SlimPajama & 38.8 & 32.8 & \textbf{15.6} & \textbf{41.4} & 59.6 & 51.5 & 33.7 & 38.1 & 32.3 & 37.1 & \textbf{23.3} & 41.5 \\
+Alpaca & 120 & 58.9 & 53.5 & 41.2 & 137 & 76.7 & 99.3 & \textbf{39.8} & 104 & 60.6 & 91.8 & \textbf{44.9} \\
+Self (seq.) & 47.2 & 30.1 & 25.3 & 39.5 & 53.2 & 59.3 & 39.0 & 38.4 & 90.2 & 123 & 73.7 & 39.9 \\
+Self (doc.) & 46.5 & 31.3 & 27.9 & 38.3 & 45.2 & 48.2 & \textbf{32.2} & 39.2 & 36.2 & 43.7 & 25.4 & 40.5 \\

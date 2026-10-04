@@ -1,0 +1,15 @@
+\textbf{Model} & \textbf{Calibration} & \textbf{Learned} & \textbf{Trainable} & \textbf{Wiki} & \textbf{C4} & \textbf{SP} & \textbf{Acc} \\
+\midrule
+\multirow{6}{*}{Llama-3.2-1B} & \multirow{2}{*}{WikiText-2} & projectors & 174\,M & 22.8 & 102 & 262 & 36.3 \\
+ &  & free factors & 486\,M & 23.0 & 113 & 301 & 36.5 \\
+ & \multirow{2}{*}{C4} & projectors & 174\,M & 62.7 & 45.3 & 109 & 39.3 \\
+ &  & free factors & 486\,M & 69.0 & 47.2 & 130 & 39.5 \\
+ & \multirow{2}{*}{Self (seq.)} & projectors & 174\,M & 53.2 & 59.3 & 39.0 & 38.4 \\
+ &  & free factors & 486\,M & 52.5 & 59.5 & 38.7 & 38.5 \\
+\midrule
+\multirow{6}{*}{OPT-1.3B} & \multirow{2}{*}{WikiText-2} & projectors & 260\,M & 20.8 & 50.3 & 55.3 & 38.7 \\
+ &  & free factors & 604\,M & 21.2 & 55.4 & 66.2 & 38.1 \\
+ & \multirow{2}{*}{C4} & projectors & 260\,M & 39.3 & 27.7 & 27.5 & 40.1 \\
+ &  & free factors & 604\,M & 42.5 & 29.1 & 30.6 & 40.8 \\
+ & \multirow{2}{*}{Self (seq.)} & projectors & 260\,M & 47.2 & 30.1 & 25.3 & 39.5 \\
+ &  & free factors & 604\,M & 49.1 & 31.3 & 25.8 & 39.2 \\
